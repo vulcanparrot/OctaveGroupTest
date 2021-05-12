@@ -11,11 +11,11 @@ class LoginAndPlay(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome("D:\Repos\octavetest\chromedriver.exe")
+        cls.driver = webdriver.Chrome("FILLIN/OctaveGroupTest\chromedriver.exe")
         url = "https://open.spotify.com/"
         cls.driver.get(url)
-        username = input("What's your spotify username or email? ")
-        password = getpass.getpass("What's your spotify password? ")
+        username = "FILLIN"
+        password = "FILLIN"
 
 
 # fail if not logged in
@@ -23,7 +23,6 @@ class LoginAndPlay(unittest.TestCase):
 
     def test_login_valid(self):
         driver = self.driver
-        driver.get(url)
 
         landing = LandingPage(driver)
         landing.click_loginbutton()
